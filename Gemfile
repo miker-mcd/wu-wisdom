@@ -23,8 +23,8 @@ group :test do
   gem 'capybara'
 end
 
-group :test, :development do
-  gem 'factory_girl'
-  gem 'faker'
-  gem 'pry'
-end
+# group :test, :development do
+#   gem 'factory_girl'
+#   gem 'faker'
+#   gem 'pry'
+# end
