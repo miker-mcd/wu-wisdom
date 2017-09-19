@@ -1,0 +1,5 @@
+<ul>
+<% @wumembers.each do |member| %>
+  <li><a href="/wumembers/<%= member.id %>"><%= member.name %></a></li>
+<% end %>
+</ul>
