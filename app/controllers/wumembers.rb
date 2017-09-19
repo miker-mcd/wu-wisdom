@@ -1,7 +1,7 @@
 require 'json'
 require 'rest-client'
 
-SLEEP_TIME = 0.5
+SLEEP_TIME = 0.025
 
 get '/wumembers' do
   @wumembers = Wumember.all
