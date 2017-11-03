@@ -1,30 +1,29 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+# wu-wisdom
 
-### Purpose
-The Sinatra Skeleton:
+## Description
+wu-wisdom is a place where visitors can receive a Witty and Unpredictable piece of wisdom by clicking on a member of the rap group, the Wu-Tang Clan. A random lyric line is displayed the [musixmatch](https://www.musixmatch.com/) API.
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+## Technologies Used
+- Back End: Sinatra, Active Record, PostgreSQL
+- Front End: Ruby, HTML
+- APIs: musixmatch
 
-### Quickstart
+## Using wu-wisdom
+Getting wisdom is easy! Simply click on a member of the Wu-Tang Clan and a random lyric line is generated from one of the member's songs.
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+## Intall wu-wisdom locally
+1. Ensure the latest version of Sinatra is installed
+2. Fork the GearShare repository to your GitHub account
+3. Clone the repository in your account to your computer
+4. Acquire and place the following in an env file located in the root folder:
+musixmatch API key
 
-As needed, create models & migrations with the `rake` tasks:
+## Challenges
+The main challenge I faced was building the logic to interact with the musixmatch API. Based on the data provided by specific responses, I had to structure a series of requests and parsed responses that ultimately led to one lyric line. Each response was a complicated data structure that I had to parse and use for the next request.
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+## Next Steps
+The top priority is to style the entire application. My idea was to display the lyric similar to how famous quotes are posted on Facebook or Instagram in a minimal font type on a modern card.
 
-### Contributing
+The next priority is to minimize the feedback loop to fetch a lyric line. One solution would be to persist a large quantity of lyric lines into a database for each member so that the application relies on database queries rather than requests to another API.
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+Other fun features include a lyrics guessing game, auto-tweeting and allowing for posting to social media accounts.
